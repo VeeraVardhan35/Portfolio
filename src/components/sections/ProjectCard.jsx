@@ -9,9 +9,11 @@ export default function ProjectCard({ project, index }) {
   const [ref, visible] = useInView(0.1);
   const even = index % 2 === 0;
 
-  const handleComingSoon = (event) => {
-    event.preventDefault();
-    toast("Coming soon");
+  const handleComingSoon = (event, href) => {
+    if (!href || href === "#") {
+      event.preventDefault();
+      toast("Coming soon");
+    }
   };
 
   return (
@@ -68,14 +70,14 @@ export default function ProjectCard({ project, index }) {
           <GhostBtn
             href={project.live}
             aria-label={`${project.title} live demo`}
-            onClick={handleComingSoon}
+            onClick={(event) => handleComingSoon(event, project.live)}
           >
             Live Demo
           </GhostBtn>
           <a
             href={project.github}
             aria-label={`${project.title} GitHub repository`}
-            onClick={handleComingSoon}
+            onClick={(event) => handleComingSoon(event, project.github)}
             className={`inline-flex items-center rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:border-orange-500/40 hover:text-orange-400 ${
               dark ? "border-white/15 text-[#d0d0d0]" : "border-black/15 text-[#555]"
             }`}
