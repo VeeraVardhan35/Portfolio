@@ -1,0 +1,25 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3F4F6"/>
+      <stop offset="1" stop-color="#E5E7EB"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="470" y1="180" x2="920" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1D4ED8"/>
+      <stop offset="1" stop-color="#0B1D74"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FF5A36"/>
+      <stop offset="1" stop-color="#DC2626"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <path d="M700 120C584 120 490 214 490 330V352C450 374 422 418 422 468V520C422 592 480 650 552 650H607L700 786L793 650H848C920 650 978 592 978 520V468C978 418 950 374 910 352V330C910 214 816 120 700 120Z" fill="url(#blue)"/>
+  <path d="M550 280H850C900 280 940 320 940 370V500C940 550 900 590 850 590H765C744 590 726 607 726 628V650H674V628C674 607 656 590 635 590H550C500 590 460 550 460 500V370C460 320 500 280 550 280Z" fill="#F9FAFB"/>
+  <path d="M690 220L560 440H680L620 610L840 350H710L780 220H690Z" fill="url(#red)"/>
+
+  <text x="360" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="120" font-weight="700" fill="#0B1D74">ResQ</text>
+  <text x="730" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="120" font-weight="500" fill="#DC2626">Flash</text>
+</svg>

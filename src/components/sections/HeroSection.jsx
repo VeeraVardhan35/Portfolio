@@ -31,13 +31,13 @@ export default function HeroSection() {
               }`}
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-orange-500" />
-              Available for full-time roles
+              Full-Stack Developer
             </div>
 
             <h1
-              className={`mb-6 text-5xl font-black leading-[1.06] tracking-tight transition-colors duration-300 lg:text-6xl xl:text-7xl ${dark ? "text-white" : "text-[#0f0f0f]"}`}
+              className={`mb-5 text-4xl font-black leading-[1.08] tracking-tight transition-colors duration-300 lg:text-5xl xl:text-6xl ${dark ? "text-white" : "text-[#0f0f0f]"}`}
             >
-              Shaping{" "}
+              Solving Complex Problems and{" "}
               <span
                 className="inline-block min-w-[200px] text-orange-500"
                 style={{
@@ -49,18 +49,15 @@ export default function HeroSection() {
                 {word}
               </span>
               <br />
-              into Real Projects
+              Digital Solutions
               <br />
-              <span className={dark ? "text-[#b3b3b3]" : "text-[#555]"}>
-                that Deliver Results
-              </span>
             </h1>
 
             <p
-              className={`mb-10 max-w-lg text-lg leading-relaxed ${dark ? "text-[#b3b3b3]" : "text-[#555]"}`}
+              className={`mb-9 max-w-lg text-base leading-relaxed ${dark ? "text-[#b3b3b3]" : "text-[#555]"}`}
             >
-              Full-stack developer obsessed with clean architecture, meaningful
-              UX, and building software that works in production.
+              I build and design practical products that turn ideas into
+              clear, real-world results.
             </p>
 
             <div className="flex flex-wrap items-center gap-4">
@@ -76,7 +73,7 @@ export default function HeroSection() {
               <button
                 onClick={() =>
                   document
-                    .getElementById("contact")
+                    .getElementById("about")
                     ?.scrollIntoView({ behavior: "smooth" })
                 }
                 className={`rounded-xl border px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:border-orange-500/60 ${
@@ -85,7 +82,7 @@ export default function HeroSection() {
                     : "border-black/15 text-[#555] hover:text-[#0f0f0f]"
                 }`}
               >
-                Let's Talk
+                About Me
               </button>
             </div>
           </div>

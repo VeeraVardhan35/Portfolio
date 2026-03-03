@@ -1,0 +1,29 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="220" y1="240" x2="740" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="70" width="1260" height="760" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#020617" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="110" width="1180" height="680" rx="54" fill="#111827" fill-opacity="0.78" stroke="#334155"/>
+    <text x="210" y="340" fill="url(#brand)" font-family="Segoe UI, Arial, sans-serif" font-size="180" font-weight="700">toopz</text>
+    <circle cx="1040" cy="272" r="14" fill="#A855F7"/>
+    <circle cx="1086" cy="272" r="14" fill="#A855F7"/>
+    <circle cx="1040" cy="318" r="14" fill="#A855F7"/>
+    <circle cx="1086" cy="318" r="14" fill="#A855F7"/>
+    <text x="230" y="500" fill="#93A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="500">
+      Stay updated with your campus feed
+    </text>
+  </g>
+</svg>

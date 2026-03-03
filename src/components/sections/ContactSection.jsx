@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { SOCIAL_LINKS } from "../../data/portfolioData";
 import { useTheme } from "../../context/ThemeContext";
 import { useInView } from "../../hooks/useInView";
 import OrangeBtn from "../common/OrangeBtn";
@@ -8,13 +9,70 @@ export default function ContactSection() {
   const { dark } = useTheme();
   const [ref, visible] = useInView();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState("");
+  const socialLinks = [
+    { label: "GitHub", href: SOCIAL_LINKS.github },
+    { label: "LinkedIn", href: SOCIAL_LINKS.linkedin },
+    { label: "Codeforces", href: SOCIAL_LINKS.codeforces },
+    { label: "LeetCode", href: SOCIAL_LINKS.leetcode },
+    { label: "AtCoder", href: SOCIAL_LINKS.atcoder },
+  ];
 
-  const submit = () => {
+  const submit = async () => {
     if (!form.name || !form.email || !form.message) return;
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
-    setTimeout(() => setSent(false), 4500);
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_3co83ch";
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_i7tnsrf";
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "95-hTd_wpK9AEevoy";
+    const toEmail = import.meta.env.VITE_CONTACT_EMAIL;
+
+    if (!serviceId || !templateId || !publicKey || !toEmail) {
+      setError("Email service is not fully configured yet. Add VITE_CONTACT_EMAIL in .env.");
+      return;
+    }
+
+    try {
+      setSending(true);
+      setError("");
+
+      const response = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          service_id: serviceId,
+          template_id: templateId,
+          user_id: publicKey,
+          template_params: {
+            to_name: "Veeravardhan",
+            to_email: toEmail,
+            toEmail: toEmail,
+            email: toEmail,
+            recipient: toEmail,
+            from_name: form.name,
+            from_email: form.email,
+            reply_to: form.email,
+            message: form.message,
+            submitted_at: new Date().toLocaleString(),
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        const details = await response.text();
+        throw new Error(`EmailJS ${response.status}: ${details || "Unknown error"}`);
+      }
+
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setSent(false), 4500);
+    } catch (submitError) {
+      const message =
+        submitError instanceof Error ? submitError.message : "Unable to send right now. Please try again.";
+      setError(message);
+    } finally {
+      setSending(false);
+    }
   };
 
   const fieldClass = `w-full rounded-xl px-4 py-3.5 text-sm border outline-none font-medium transition-all duration-200 ${
@@ -55,6 +113,11 @@ export default function ContactSection() {
             {sent ? (
               <div className="mb-6 rounded-xl border border-orange-500/30 bg-orange-500/10 px-5 py-4 text-sm font-semibold text-orange-500">
                 Message received. I will get back to you soon.
+              </div>
+            ) : null}
+            {error ? (
+              <div className="mb-6 rounded-xl border border-red-500/30 bg-red-500/10 px-5 py-4 text-sm font-semibold text-red-500">
+                {error}
               </div>
             ) : null}
 
@@ -116,20 +179,22 @@ export default function ContactSection() {
             </div>
 
             <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-              <div className="flex gap-5">
-                {["GitHub", "LinkedIn", "Twitter"].map((social) => (
+              <div className="flex flex-wrap gap-5">
+                {socialLinks.map((social) => (
                   <a
-                    key={social}
-                    href="#"
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
                     className={`text-sm font-semibold transition-colors duration-200 hover:text-orange-500 ${
                       dark ? "text-[#b3b3b3]" : "text-[#777]"
                     }`}
                   >
-                    {social}
+                    {social.label}
                   </a>
                 ))}
               </div>
-              <OrangeBtn onClick={submit}>Send Message &rarr;</OrangeBtn>
+              <OrangeBtn onClick={submit}>{sending ? "Sending..." : "Send Message ->"}</OrangeBtn>
             </div>
           </div>
         </div>

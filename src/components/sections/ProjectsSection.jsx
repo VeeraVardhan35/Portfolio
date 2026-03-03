@@ -1,6 +1,6 @@
 import { PROJECTS } from "../../data/portfolioData";
-import { useTheme } from "../../context/ThemeContext";
 import { useInView } from "../../hooks/useInView";
+import { useTheme } from "../../context/ThemeContext";
 import SectionTag from "../common/SectionTag";
 import ProjectCard from "./ProjectCard";
 
@@ -24,11 +24,13 @@ export default function ProjectsSection() {
         >
           <SectionTag text="Projects" />
           <h2
-            className={`mb-4 text-4xl font-black transition-colors duration-300 lg:text-5xl ${dark ? "text-white" : "text-[#0f0f0f]"}`}
+            className={`mb-4 text-4xl font-black transition-colors duration-300 lg:text-5xl ${
+              dark ? "text-white" : "text-[#0f0f0f]"
+            }`}
           >
             Things I've shipped
           </h2>
-          <p className={`mb-14 max-w-lg text-base ${dark ? "text-[#b3b3b3]" : "text-[#555]"}`}>
+          <p className={`mb-14 max-w-xl text-base ${dark ? "text-[#b3b3b3]" : "text-[#555]"}`}>
             Real full-stack projects, not just tutorial clones.
           </p>
         </div>

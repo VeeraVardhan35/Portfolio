@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { ABOUT_IMG, ABOUT_IMG_FALLBACK } from "../../data/portfolioData";
+import { ABOUT_IMG, ABOUT_IMG_FALLBACK, SOCIAL_LINKS } from "../../data/portfolioData";
 import { useTheme } from "../../context/ThemeContext";
 import { useInView } from "../../hooks/useInView";
-import OrangeBtn from "../common/OrangeBtn";
 import SectionTag from "../common/SectionTag";
 
 export default function AboutSection() {
@@ -44,34 +43,68 @@ export default function AboutSection() {
           <div>
             <SectionTag text="About Me" />
             <h2
-              className={`mb-6 text-4xl font-black leading-tight transition-colors duration-300 lg:text-5xl ${dark ? "text-white" : "text-[#0f0f0f]"}`}
+              className={`mb-2 text-4xl font-black leading-tight transition-colors duration-300 lg:text-5xl ${dark ? "text-white" : "text-[#0f0f0f]"}`}
             >
-              I don't just write code.
-              <br />
-              <span className="text-orange-500">I solve problems.</span>
+              Veeravardhan Lingasani
             </h2>
-            <p
-              className={`mb-5 text-base leading-relaxed ${dark ? "text-[#b3b3b3]" : "text-[#555]"}`}
-            >
-              I'm a fresher full-stack developer who went from complete
-              beginner to shipping production-ready applications in under a
-              year.
+            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-orange-500">
+              Backend-Focused Full-Stack Developer
             </p>
+            <p
+              className={`mb-6 text-sm font-medium ${dark ? "text-[#d2d2d2]" : "text-[#3a3a3a]"}`}
+            >
+              B.Tech, IIITDMJ (Expected 2027)
+            </p>
+            <h3
+              className={`mb-5 text-2xl font-bold leading-snug lg:text-3xl ${dark ? "text-white" : "text-[#111]"}`}
+            >
+              <span className="text-orange-500">"</span>I build scalable APIs
+              and production-ready backend systems.
+              <span className="text-orange-500">"</span>
+            </h3>
             <p
               className={`mb-8 text-base leading-relaxed ${dark ? "text-[#b3b3b3]" : "text-[#555]"}`}
             >
-              I learn fast, adapt faster, and focus on code that is
-              maintainable, practical, and user-friendly.
+              I am a backend-focused full-stack developer specializing in
+              MERN Stack and Django. I build secure,
+              scalable, and maintainable applications with proper
+              authentication, caching, database optimization, and clean
+              architecture. Strong in Data Structures & Algorithms and
+              competitive programming.
             </p>
-            <OrangeBtn
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Let's Build Together &rarr;
-            </OrangeBtn>
+
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="/resume.pdf"
+                className="rounded-xl bg-orange-500 px-6 py-3 text-sm font-bold tracking-wide text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-[0_0_24px_rgba(255,107,0,0.45)]"
+              >
+                View Resume
+              </a>
+              <a
+                href={SOCIAL_LINKS.github}
+                target="_blank"
+                rel="noreferrer"
+                className={`rounded-xl border px-6 py-3 text-sm font-semibold transition-all duration-300 ${
+                  dark
+                    ? "border-white/20 text-white hover:border-orange-500/60 hover:text-orange-400"
+                    : "border-[#0f0f0f]/20 text-[#111] hover:border-orange-500/70 hover:text-orange-600"
+                }`}
+              >
+                GitHub
+              </a>
+              <a
+                href={SOCIAL_LINKS.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className={`rounded-xl border px-6 py-3 text-sm font-semibold transition-all duration-300 ${
+                  dark
+                    ? "border-white/20 text-white hover:border-orange-500/60 hover:text-orange-400"
+                    : "border-[#0f0f0f]/20 text-[#111] hover:border-orange-500/70 hover:text-orange-600"
+                }`}
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>

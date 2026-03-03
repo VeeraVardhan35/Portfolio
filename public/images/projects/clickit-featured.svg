@@ -1,0 +1,36 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <rect x="110" y="100" width="1180" height="700" rx="36" fill="#111827" stroke="#334155"/>
+
+  <rect x="180" y="170" width="480" height="560" rx="24" fill="#0B1220" stroke="#1E293B"/>
+  <rect x="220" y="220" width="180" height="20" rx="10" fill="#1F2937"/>
+  <rect x="220" y="260" width="360" height="14" rx="7" fill="#1F2937"/>
+  <rect x="220" y="290" width="330" height="14" rx="7" fill="#1F2937"/>
+  <rect x="220" y="320" width="350" height="14" rx="7" fill="#1F2937"/>
+  <rect x="220" y="375" width="140" height="38" rx="12" fill="url(#accent)"/>
+  <text x="245" y="401" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">ATS 92%</text>
+
+  <rect x="720" y="170" width="500" height="560" rx="24" fill="#0B1220" stroke="#1E293B"/>
+  <rect x="760" y="220" width="420" height="18" rx="9" fill="#1F2937"/>
+  <rect x="760" y="260" width="360" height="14" rx="7" fill="#1F2937"/>
+  <rect x="760" y="290" width="390" height="14" rx="7" fill="#1F2937"/>
+  <rect x="760" y="320" width="340" height="14" rx="7" fill="#1F2937"/>
+  <rect x="760" y="370" width="420" height="200" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="790" y="404" width="260" height="16" rx="8" fill="#334155"/>
+  <rect x="790" y="436" width="310" height="12" rx="6" fill="#334155"/>
+  <rect x="790" y="462" width="280" height="12" rx="6" fill="#334155"/>
+  <rect x="790" y="488" width="300" height="12" rx="6" fill="#334155"/>
+
+  <text x="112" y="72" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700" fill="#CBD5E1">Resume Optimization Dashboard</text>
+</svg>
