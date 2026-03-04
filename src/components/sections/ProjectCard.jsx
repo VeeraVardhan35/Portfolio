@@ -8,9 +8,14 @@ export default function ProjectCard({ project, index }) {
   const { dark } = useTheme();
   const [ref, visible] = useInView(0.1);
   const even = index % 2 === 0;
+  const liveHref = typeof project.live === "string" ? project.live.trim() : "";
+  const githubHref = typeof project.github === "string" ? project.github.trim() : "";
+  const isTrashCollector = project.title === "Trash Collector and Sorter Robot";
+  const isCVAstra = project.title === "CVAstra";
 
   const handleComingSoon = (event, href) => {
-    if (!href || href === "#") {
+    const normalizedHref = typeof href === "string" ? href.trim() : "";
+    if (!normalizedHref || normalizedHref === "#") {
       event.preventDefault();
       toast("Coming soon");
     }
@@ -67,17 +72,23 @@ export default function ProjectCard({ project, index }) {
           ))}
         </div>
         <div className="flex gap-4">
-          <GhostBtn
-            href={project.live}
-            aria-label={`${project.title} live demo`}
-            onClick={(event) => handleComingSoon(event, project.live)}
-          >
-            Live Demo
-          </GhostBtn>
+          {!isTrashCollector && (
+            <GhostBtn
+              href={liveHref || "#"}
+              aria-label={`${project.title} live demo`}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(event) => handleComingSoon(event, liveHref)}
+            >
+              Live Demo
+            </GhostBtn>
+          )}
           <a
-            href={project.github}
+            href={githubHref || "#"}
             aria-label={`${project.title} GitHub repository`}
-            onClick={(event) => handleComingSoon(event, project.github)}
+            target="_blank"
+            rel="noreferrer"
+            onClick={(event) => handleComingSoon(event, isCVAstra ? "#" : githubHref)}
             className={`inline-flex items-center rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:border-orange-500/40 hover:text-orange-400 ${
               dark ? "border-white/15 text-[#d0d0d0]" : "border-black/15 text-[#555]"
             }`}

@@ -30,7 +30,7 @@ export const PROJECTS = [
     img: "/images/projects/resqflash-featured.svg",
     stack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Leaflet", "JWT", "Docker"],
     live: "#",
-    github: "https://github.com/VeeraVardhan35/ResQFlash",
+    github: "https://github.com/VeeraVardhan35/resQflash-emergency-system",
     status: "Currently Working",
   },
   {
@@ -48,7 +48,7 @@ export const PROJECTS = [
       "Socket.IO",
       "Tailwind CSS",
     ],
-    live: "#",
+    live: "https://toopz-1.onrender.com/",
     github: "https://github.com/VeeraVardhan35/Toopz",
   },
   {
@@ -59,7 +59,7 @@ export const PROJECTS = [
     img: "/images/projects/robotic-arm-featured.svg",
     stack: ["Raspberry Pi", "Arduino", "TensorFlow Lite", "OpenCV", "Python", "C++"],
     live: "#",
-    github: "https://github.com/VeeraVardhan35/Trash-Collector-and-Sorter-Robot",
+    github: "https://github.com/VeeraVardhan35/Trash_collector_robot",
   },
   {
     id: 5,
@@ -68,8 +68,8 @@ export const PROJECTS = [
     desc: "Web app that dynamically selects Codeforces problems by difficulty and tags while avoiding duplicates. Automated database updates via Codeforces API and deployed on Render.",
     img: "/images/projects/codeforces-featured.svg",
     stack: ["Django", "PostgreSQL", "Bootstrap", "Render"],
-    live: "#",
-    github: "https://github.com/VeeraVardhan35/Codeforces-Problem-Picker",
+    live: "https://codeforces-problem-picker-2.onrender.com/",
+    github: "https://github.com/VeeraVardhan35/Codeforces_Problem_Picker",
   },
 ];
 
