@@ -1,51 +1,108 @@
 <svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="wall" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#2E2E2E"/>
-      <stop offset="1" stop-color="#3A3A3A"/>
-    </linearGradient>
-    <linearGradient id="table" x1="0" y1="560" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#D7C4A5"/>
-      <stop offset="1" stop-color="#BFA07E"/>
-    </linearGradient>
-    <linearGradient id="arm" x1="820" y1="180" x2="1120" y2="620" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FB923C"/>
-      <stop offset="1" stop-color="#EA580C"/>
-    </linearGradient>
-  </defs>
+  <!-- Background -->
+  <rect width="1400" height="900" rx="30" fill="#0B0F19" />
+  <rect x="2" y="2" width="1396" height="896" rx="28" stroke="#1F2937" stroke-width="4" stroke-opacity="0.4" />
 
-  <rect width="1400" height="560" fill="url(#wall)"/>
-  <rect y="560" width="1400" height="340" fill="url(#table)"/>
+  <!-- Layout Divider -->
+  <line x1="450" y1="0" x2="450" y2="900" stroke="#1E293B" stroke-width="2" stroke-dasharray="8 8" />
 
-  <g opacity="0.96">
-    <rect x="54" y="170" width="330" height="470" rx="18" fill="#111827" stroke="#334155" stroke-width="4"/>
-    <rect x="76" y="194" width="286" height="318" rx="8" fill="#E5E7EB"/>
-    <rect x="76" y="526" width="286" height="94" rx="8" fill="#0B1220"/>
-    <circle cx="219" cy="573" r="18" fill="#1F2937"/>
+  <!-- Left Sidebar: Material Detection Stats -->
+  <g id="stats-panel" transform="translate(40, 60)">
+    <rect x="0" y="0" width="370" height="780" rx="20" fill="#070A13" stroke="#1E293B" stroke-width="2" />
+    <text x="30" y="55" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">Detected Material</text>
+    
+    <!-- Item: Plastic -->
+    <g transform="translate(30, 110)">
+      <rect x="0" y="0" width="310" height="80" rx="12" fill="#0F172A" stroke="#10B981" stroke-width="2" />
+      <!-- Plastic Icon / Label -->
+      <text x="20" y="47" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">Plastic</text>
+      <!-- Checked Indicator -->
+      <path d="M260 40 L270 50 L290 30" stroke="#10B981" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+
+    <!-- Item: Metal -->
+    <g transform="translate(30, 210)">
+      <rect x="0" y="0" width="310" height="80" rx="12" fill="#0B0F19" stroke="#1E293B" stroke-width="1.5" />
+      <text x="20" y="47" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Metal</text>
+      <path d="M260 40 L270 50 L290 30" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+
+    <!-- Item: Paper -->
+    <g transform="translate(30, 310)">
+      <rect x="0" y="0" width="310" height="80" rx="12" fill="#0B0F19" stroke="#1E293B" stroke-width="1.5" />
+      <text x="20" y="47" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Paper</text>
+      <path d="M260 40 L270 50 L290 30" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
+
+    <!-- Item: Glass -->
+    <g transform="translate(30, 410)">
+      <rect x="0" y="0" width="310" height="80" rx="12" fill="#0B0F19" stroke="#1E293B" stroke-width="1.5" />
+      <text x="20" y="47" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Glass</text>
+      <path d="M260 40 L270 50 L290 30" stroke="#94A3B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    </g>
   </g>
 
-  <g>
-    <ellipse cx="1034" cy="702" rx="122" ry="30" fill="#9CA3AF" fill-opacity="0.38"/>
-    <ellipse cx="1034" cy="684" rx="136" ry="22" fill="#D1D5DB"/>
-    <rect x="944" y="530" width="180" height="170" rx="30" fill="url(#arm)" stroke="#C2410C" stroke-width="8"/>
-    <circle cx="1034" cy="604" r="24" fill="#111827" fill-opacity="0.45"/>
-  </g>
+  <!-- Right Side: 3D Workspace Representation -->
+  <g id="workspace" transform="translate(500, 60)">
+    <!-- Main screen frame -->
+    <rect x="0" y="0" width="860" height="780" rx="20" fill="#070A13" stroke="#1E293B" stroke-width="2" />
+    
+    <!-- Conveyor Belt -->
+    <rect x="50" y="550" width="760" height="60" rx="10" fill="#1E293B" />
+    <!-- Conveyor roller wheels -->
+    <circle cx="90" cy="580" r="16" fill="#111827" />
+    <circle cx="210" cy="580" r="16" fill="#111827" />
+    <circle cx="330" cy="580" r="16" fill="#111827" />
+    <circle cx="450" cy="580" r="16" fill="#111827" />
+    <circle cx="570" cy="580" r="16" fill="#111827" />
+    <circle cx="690" cy="580" r="16" fill="#111827" />
+    <circle cx="770" cy="580" r="16" fill="#111827" />
 
-  <g transform="rotate(-10 1010 470)">
-    <rect x="954" y="342" width="112" height="240" rx="36" fill="url(#arm)" stroke="#C2410C" stroke-width="8"/>
-    <rect x="998" y="254" width="248" height="102" rx="32" fill="url(#arm)" stroke="#C2410C" stroke-width="8"/>
-    <rect x="1180" y="265" width="64" height="76" rx="12" fill="#111827" fill-opacity="0.35"/>
-  </g>
+    <!-- Conveyor belt support structures -->
+    <rect x="120" y="610" width="30" height="120" fill="#111827" />
+    <rect x="690" y="610" width="30" height="120" fill="#111827" />
 
-  <g transform="translate(1214 284)">
-    <rect x="-2" y="0" width="14" height="78" rx="7" fill="#E5E7EB" stroke="#9CA3AF"/>
-    <rect x="20" y="2" width="14" height="76" rx="7" fill="#E5E7EB" stroke="#9CA3AF"/>
-    <rect x="42" y="8" width="12" height="66" rx="6" fill="#D1D5DB" stroke="#9CA3AF"/>
-  </g>
+    <!-- Plastic Water Bottle on Belt -->
+    <g transform="translate(420, 420)">
+      <!-- Transparent Bottle Body -->
+      <path d="M -15 30 L -15 110 A 15 15 0 0 0 15 110 L 15 30 L 8 15 L 8 0 L -8 0 L -8 15 Z" fill="#60A5FA" fill-opacity="0.35" stroke="#60A5FA" stroke-width="2" stroke-linejoin="round" />
+      <!-- Water level line inside -->
+      <path d="M -15 70 A 15 15 0 0 0 15 70 L 15 110 A 15 15 0 0 1 -15 110 Z" fill="#3B82F6" fill-opacity="0.5" />
+      <!-- Cap -->
+      <rect x="-8" y="-6" width="16" height="8" rx="2" fill="#2563EB" />
+    </g>
 
-  <g>
-    <rect x="690" y="575" width="190" height="120" rx="12" fill="#C49A6C" stroke="#A17C54" stroke-width="5"/>
-    <rect x="763" y="628" width="105" height="46" rx="16" fill="#2563EB"/>
-    <rect x="786" y="606" width="68" height="24" rx="10" fill="#D1D5DB"/>
+    <!-- Robotic Arm Setup -->
+    <g transform="translate(630, 220)">
+      <!-- Robot Base -->
+      <rect x="-50" y="280" width="100" height="50" rx="10" fill="#1F2937" stroke="#374151" stroke-width="2" />
+      <circle cx="0" cy="280" r="30" fill="#EAB308" />
+
+      <!-- Segment 1: Lower Arm -->
+      <g transform="rotate(-35 0 280)">
+        <rect x="-12" y="0" width="24" height="160" rx="8" fill="#F59E0B" />
+        <!-- Joint 2 -->
+        <circle cx="0" cy="160" r="18" fill="#1F2937" />
+        
+        <!-- Segment 2: Upper Arm -->
+        <g transform="translate(0, 160) rotate(90)">
+          <rect x="-8" y="0" width="16" height="180" rx="6" fill="#F59E0B" />
+          <!-- Joint 3 / Wrist -->
+          <circle cx="0" cy="180" r="14" fill="#1F2937" />
+          
+          <!-- End Effector / Gripper -->
+          <g transform="translate(0, 180) rotate(-55)">
+            <path d="M-6 0 L-6 24 L-20 40 L-14 42 L0 26 L14 42 L20 40 L6 24 L6 0 Z" fill="#1F2937" />
+            <!-- Laser pointer/Scanner ray pointing downwards to bottle -->
+            <path d="M0 26 L-210 240" stroke="#EF4444" stroke-width="3" stroke-dasharray="6 6" />
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Status Text Overlay -->
+    <rect x="50" y="50" width="220" height="50" rx="10" fill="#0B0F19" stroke="#1E293B" stroke-width="1.5" />
+    <circle cx="75" cy="75" r="8" fill="#EAB308" />
+    <text x="95" y="80" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Status: Sorting...</text>
   </g>
 </svg>

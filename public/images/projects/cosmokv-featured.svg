@@ -1,0 +1,117 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="900" rx="30" fill="#0A0E1A" />
+  <rect x="2" y="2" width="1396" height="896" rx="28" stroke="#1F2937" stroke-width="4" stroke-opacity="0.4" />
+
+  <!-- Layout Dividers -->
+  <line x1="700" y1="0" x2="700" y2="900" stroke="#1E293B" stroke-width="2" stroke-dasharray="8 8" />
+
+  <!-- Left: Cluster Architecture -->
+  <g id="cluster" transform="translate(0, 0)">
+    <text x="350" y="80" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800" text-anchor="middle">CosmoKV Cluster</text>
+    
+    <!-- Central Coordinator Node -->
+    <g transform="translate(350, 240)">
+      <!-- Node Connection Lines -->
+      <path d="M0 40 L-220 180" stroke="#3B82F6" stroke-width="3" stroke-dasharray="4 4" />
+      <path d="M0 40 L-110 180" stroke="#3B82F6" stroke-width="3" />
+      <path d="M0 40 L0 180" stroke="#3B82F6" stroke-width="3" />
+      <path d="M0 40 L110 180" stroke="#3B82F6" stroke-width="3" />
+      <path d="M0 40 L220 180" stroke="#3B82F6" stroke-width="3" stroke-dasharray="4 4" />
+
+      <!-- Coordinator circle -->
+      <circle cx="0" cy="0" r="55" fill="#1E3A8A" stroke="#3B82F6" stroke-width="4" />
+      <!-- DB Coordinator Icon -->
+      <path d="M-20 -15 C-20 -25 20 -25 20 -15 M-20 -15 V15 C-20 25 20 25 20 15 V-15 M-20 -5 C-20 5 20 5 20 -5 M-20 5 C-20 15 20 15 20 5" stroke="#FFF" stroke-width="4" fill="none" stroke-linejoin="round"/>
+      <text x="0" y="85" fill="#93C5FD" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Coordinator</text>
+    </g>
+
+    <!-- Node 1 -->
+    <g transform="translate(130, 480)">
+      <circle cx="0" cy="0" r="45" fill="#111827" stroke="#1E293B" stroke-width="3" />
+      <!-- Database cylinder icon -->
+      <path d="M-15 -10 C-15 -17 15 -17 15 -10 M-15 -10 V10 C-15 17 15 17 15 10 V-10 M-15 0 C-15 7 15 7 15 0" stroke="#60A5FA" stroke-width="3" fill="none"/>
+      <text x="0" y="70" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Node 1</text>
+    </g>
+
+    <!-- Node 2 -->
+    <g transform="translate(240, 480)">
+      <circle cx="0" cy="0" r="45" fill="#111827" stroke="#1E293B" stroke-width="3" />
+      <path d="M-15 -10 C-15 -17 15 -17 15 -10 M-15 -10 V10 C-15 17 15 17 15 10 V-10 M-15 0 C-15 7 15 7 15 0" stroke="#60A5FA" stroke-width="3" fill="none"/>
+      <text x="0" y="70" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Node 2</text>
+    </g>
+
+    <!-- Node 3 (Highlighted as selected) -->
+    <g transform="translate(350, 480)">
+      <circle cx="0" cy="0" r="45" fill="#1E3A8A" stroke="#3B82F6" stroke-width="4" />
+      <path d="M-15 -10 C-15 -17 15 -17 15 -10 M-15 -10 V10 C-15 17 15 17 15 10 V-10 M-15 0 C-15 7 15 7 15 0" stroke="#FFF" stroke-width="3" fill="none"/>
+      <text x="0" y="70" fill="#FFF" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Node 3</text>
+      <!-- Pulse rings -->
+      <circle cx="0" cy="0" r="60" stroke="#3B82F6" stroke-width="2" stroke-opacity="0.5" />
+    </g>
+
+    <!-- Node 4 -->
+    <g transform="translate(460, 480)">
+      <circle cx="0" cy="0" r="45" fill="#111827" stroke="#1E293B" stroke-width="3" />
+      <path d="M-15 -10 C-15 -17 15 -17 15 -10 M-15 -10 V10 C-15 17 15 17 15 10 V-10 M-15 0 C-15 7 15 7 15 0" stroke="#60A5FA" stroke-width="3" fill="none"/>
+      <text x="0" y="70" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Node 4</text>
+    </g>
+
+    <!-- Node 5 -->
+    <g transform="translate(570, 480)">
+      <circle cx="0" cy="0" r="45" fill="#111827" stroke="#1E293B" stroke-width="3" />
+      <path d="M-15 -10 C-15 -17 15 -17 15 -10 M-15 -10 V10 C-15 17 15 17 15 10 V-10 M-15 0 C-15 7 15 7 15 0" stroke="#60A5FA" stroke-width="3" fill="none"/>
+      <text x="0" y="70" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Node 5</text>
+    </g>
+  </g>
+
+  <!-- Right: Terminal Box -->
+  <g id="terminal" transform="translate(750, 80)">
+    <!-- Terminal Header -->
+    <rect x="0" y="0" width="570" height="740" rx="16" fill="#070A13" stroke="#1E293B" stroke-width="3" />
+    <rect x="0" y="0" width="570" height="50" rx="16" fill="#0F172A" />
+    <!-- Three dots -->
+    <circle cx="30" cy="25" r="7" fill="#EF4444" />
+    <circle cx="55" cy="25" r="7" fill="#F59E0B" />
+    <circle cx="80" cy="25" r="7" fill="#10B981" />
+    <text x="285" y="32" fill="#6B7280" font-family="monospace" font-size="16" font-weight="bold" text-anchor="middle">cosmokv-cli - bash</text>
+
+    <!-- Console Text -->
+    <g transform="translate(30, 110)" font-family="Consolas, Monaco, 'Fira Code', monospace" font-size="18" font-weight="600" xml:space="preserve">
+      <!-- Command 1 -->
+      <text x="0" y="0" fill="#10B981">$ <tspan fill="#F3F4F6">cosmokv-cli get user:1001</tspan></text>
+      
+      <!-- Output 1 -->
+      <text x="0" y="45" fill="#EAB308">Value:</text>
+      <text x="80" y="45" fill="#38BDF8">{"name": "Veeravardhan"}</text>
+      
+      <text x="0" y="85" fill="#EAB308">Version:</text>
+      <text x="100" y="85" fill="#FFF">12</text>
+      
+      <text x="0" y="125" fill="#EAB308">Node:</text>
+      <text x="70" y="125" fill="#FFF">3</text>
+      
+      <text x="0" y="165" fill="#EAB308">Status:</text>
+      <text x="90" y="165" fill="#10B981">OK</text>
+
+      <!-- Empty Line / Divider -->
+      <line x1="0" y1="210" x2="510" y2="210" stroke="#1E293B" stroke-width="2" />
+
+      <!-- Command 2 -->
+      <text x="0" y="260" fill="#10B981">$ <tspan fill="#F3F4F6">cosmokv-cli stats</tspan></text>
+      
+      <!-- Output 2 -->
+      <text x="0" y="305" fill="#94A3B8">Total Nodes:</text>
+      <text x="140" y="305" fill="#FFF">5</text>
+      
+      <text x="0" y="345" fill="#94A3B8">Replicas:</text>
+      <text x="110" y="345" fill="#FFF">3</text>
+      
+      <text x="0" y="385" fill="#94A3B8">OPS:</text>
+      <text x="60" y="385" fill="#34D399">12856</text>
+      
+      <text x="0" y="425" fill="#94A3B8">Status:</text>
+      <text x="90" y="425" fill="#34D399">Healthy</text>
+    </g>
+  </g>
+</svg>

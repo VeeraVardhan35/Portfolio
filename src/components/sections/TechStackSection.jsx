@@ -8,11 +8,19 @@ const TECH_CATEGORIES = [
     name: "Frontend",
     logo: "https://cdn.simpleicons.org/react/61DAFB",
     skills: [
-      { name: "HTML", logo: "https://cdn.simpleicons.org/html5/E34F26" },
-      { name: "CSS", logo: "https://cdn.simpleicons.org/css/1572B6" },
-      { name: "React", logo: "https://cdn.simpleicons.org/react/61DAFB" },
-      { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+      { name: "React.js", logo: "https://cdn.simpleicons.org/react/61DAFB" },
+      { name: "TypeScript", logo: "https://cdn.simpleicons.org/typescript/3178C6" },
+      { name: "JavaScript (ES6+)", logo: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+      { name: "HTML5", logo: "https://cdn.simpleicons.org/html5/E34F26" },
+      { name: "CSS3", logo: "https://cdn.simpleicons.org/css3/1572B6" },
       { name: "Tailwind CSS", logo: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+      { name: "Vite", logo: "https://cdn.simpleicons.org/vite/646CFF" },
+      { name: "Zustand", logo: "https://cdn.simpleicons.org/react/61DAFB" },
+      { name: "React Router", logo: "https://cdn.simpleicons.org/reactrouter/CA4245" },
+      { name: "Socket.IO Client", logo: "https://cdn.simpleicons.org/socketdotio/010101" },
+      { name: "Monaco Editor", logo: "" },
+      { name: "Framer Motion", logo: "https://cdn.simpleicons.org/framer/0055FF" },
+      { name: "Shadcn/UI", logo: "https://cdn.simpleicons.org/shadcnui/FFFFFF" },
     ],
   },
   {
@@ -22,12 +30,18 @@ const TECH_CATEGORIES = [
     skills: [
       { name: "Node.js", logo: "https://cdn.simpleicons.org/nodedotjs/5FA04E" },
       { name: "Express.js", logo: "https://cdn.simpleicons.org/express/FFFFFF" },
-      { name: "Django", logo: "https://cdn.simpleicons.org/django/44B78B" },
-      {
-        name: "Django REST Framework",
-        logo: "https://cdn.simpleicons.org/djangorestframework/FF1709",
-      },
-      { name: "JWT", logo: "https://cdn.simpleicons.org/jsonwebtokens/F97316" },
+      { name: "FastAPI", logo: "https://cdn.simpleicons.org/fastapi/009688" },
+      { name: "Django", logo: "https://cdn.simpleicons.org/django/092E20" },
+      { name: "JWT Authentication", logo: "https://cdn.simpleicons.org/jsonwebtokens/F97316" },
+      { name: "REST APIs", logo: "https://cdn.simpleicons.org/postman/FF6C37" },
+      { name: "WebSockets", logo: "https://cdn.simpleicons.org/socketdotio/010101" },
+      { name: "Socket.IO", logo: "https://cdn.simpleicons.org/socketdotio/010101" },
+      { name: "Colyseus", logo: "" },
+      { name: "gRPC", logo: "https://cdn.simpleicons.org/grpc/244C5A" },
+      { name: "Protocol Buffers", logo: "" },
+      { name: "OAuth", logo: "https://cdn.simpleicons.org/oauth/FFFFFF" },
+      { name: "Multer", logo: "https://cdn.simpleicons.org/nodedotjs/5FA04E" },
+      { name: "Cloudinary API", logo: "https://cdn.simpleicons.org/cloudinary/3448C5" },
     ],
   },
   {
@@ -35,9 +49,14 @@ const TECH_CATEGORIES = [
     name: "Databases",
     logo: "https://cdn.simpleicons.org/postgresql/4169E1",
     skills: [
-      { name: "PostgreSQL", logo: "https://cdn.simpleicons.org/postgresql/4169E1" },
       { name: "MongoDB", logo: "https://cdn.simpleicons.org/mongodb/47A248" },
+      { name: "PostgreSQL", logo: "https://cdn.simpleicons.org/postgresql/4169E1" },
+      { name: "MySQL", logo: "https://cdn.simpleicons.org/mysql/4479A1" },
       { name: "Redis", logo: "https://cdn.simpleicons.org/redis/DC382D" },
+      { name: "Mongoose", logo: "https://cdn.simpleicons.org/mongoose/880000" },
+      { name: "Drizzle ORM", logo: "https://cdn.simpleicons.org/drizzle/C5F015" },
+      { name: "Qdrant", logo: "" },
+      { name: "Vector Databases", logo: "https://cdn.simpleicons.org/weaviate/00E88F" },
     ],
   },
   {
@@ -48,9 +67,13 @@ const TECH_CATEGORIES = [
       { name: "Docker", logo: "https://cdn.simpleicons.org/docker/2496ED" },
       { name: "Git", logo: "https://cdn.simpleicons.org/git/F05032" },
       { name: "GitHub", logo: "https://cdn.simpleicons.org/github/FFFFFF" },
-      { name: "CI/CD", logo: "https://cdn.simpleicons.org/githubactions/2088FF" },
-      { name: "Kubernetes", logo: "https://cdn.simpleicons.org/kubernetes/326CE5" },
-      { name: "Swagger", logo: "https://cdn.simpleicons.org/swagger/85EA2D" },
+      { name: "Linux", logo: "https://cdn.simpleicons.org/linux/FCC624" },
+      { name: "CMake", logo: "https://cdn.simpleicons.org/cmake/064F8C" },
+      { name: "Render", logo: "" },
+      { name: "Vercel", logo: "https://cdn.simpleicons.org/vercel/FFFFFF" },
+      { name: "Nginx", logo: "https://cdn.simpleicons.org/nginx/009639" },
+      { name: "GitHub Actions", logo: "https://cdn.simpleicons.org/githubactions/2088FF" },
+      { name: "Postman", logo: "https://cdn.simpleicons.org/postman/FF6C37" },
     ],
   },
   {
@@ -58,10 +81,46 @@ const TECH_CATEGORIES = [
     name: "AI Integration",
     logo: "https://cdn.simpleicons.org/openai/10A37F",
     skills: [
-      { name: "OpenAI / LLM APIs", logo: "https://cdn.simpleicons.org/openai/10A37F" },
       { name: "RAG", logo: "https://cdn.simpleicons.org/langchain/1C3C3C" },
-      { name: "Embeddings", logo: "https://cdn.simpleicons.org/weaviate/00E88F" },
-      { name: "FAISS / Chroma", logo: "https://cdn.simpleicons.org/chromatic/FC521F" },
+      { name: "Agentic AI", logo: "https://cdn.simpleicons.org/openai/10A37F" },
+      { name: "LangChain", logo: "https://cdn.simpleicons.org/langchain/1C3C3C" },
+      { name: "LangGraph", logo: "https://cdn.simpleicons.org/langchain/1C3C3C" },
+      { name: "Cohere Embeddings", logo: "https://cdn.simpleicons.org/cohere/000000" },
+      { name: "OpenRouter API", logo: "https://cdn.simpleicons.org/openai/10A37F" },
+      { name: "LLM Applications", logo: "https://cdn.simpleicons.org/openai/10A37F" },
+      { name: "Prompt Engineering", logo: "https://cdn.simpleicons.org/openai/10A37F" },
+      { name: "Embedding Models", logo: "https://cdn.simpleicons.org/weaviate/00E88F" },
+      { name: "Vector Search", logo: "" },
+      { name: "Semantic Search", logo: "https://cdn.simpleicons.org/weaviate/00E88F" },
+    ],
+  },
+  {
+    id: "languages",
+    name: "Languages",
+    logo: "https://cdn.simpleicons.org/cplusplus/00599C",
+    skills: [
+      { name: "C", logo: "https://cdn.simpleicons.org/c/A8B9CC" },
+      { name: "C++", logo: "https://cdn.simpleicons.org/cplusplus/00599C" },
+      { name: "Python", logo: "https://cdn.simpleicons.org/python/3776AB" },
+      { name: "Java", logo: "https://cdn.simpleicons.org/java/007396" },
+      { name: "JavaScript", logo: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+      { name: "TypeScript", logo: "https://cdn.simpleicons.org/typescript/3178C6" },
+      { name: "SQL", logo: "https://cdn.simpleicons.org/sqlite/003B57" },
+    ],
+  },
+  {
+    id: "corecs",
+    name: "Core CS",
+    logo: "https://cdn.simpleicons.org/codeforces/1F8ACB",
+    skills: [
+      { name: "Data Structures & Algorithms", logo: "https://cdn.simpleicons.org/codeforces/1F8ACB" },
+      { name: "OOP", logo: "https://cdn.simpleicons.org/java/007396" },
+      { name: "DBMS", logo: "https://cdn.simpleicons.org/postgresql/4169E1" },
+      { name: "Operating Systems", logo: "https://cdn.simpleicons.org/linux/FCC624" },
+      { name: "Computer Networks", logo: "https://cdn.simpleicons.org/wireshark/167EC6" },
+      { name: "Distributed Systems", logo: "https://cdn.simpleicons.org/apache/D22128" },
+      { name: "System Design", logo: "https://cdn.simpleicons.org/gitbook/3963FF" },
+      { name: "Cloud Computing", logo: "https://cdn.simpleicons.org/amazonwebservices/232F3E" },
     ],
   },
 ];
@@ -211,7 +270,7 @@ export default function TechStackSection() {
           Click a category to explore the technologies I use in production projects.
         </p>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid gap-5 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7">
           {TECH_CATEGORIES.map((category) => (
             <CategoryCard
               key={category.id}

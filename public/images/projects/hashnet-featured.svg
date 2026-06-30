@@ -1,0 +1,187 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1400" height="900" rx="30" fill="#0B0F19" />
+  
+  <!-- Outer Window Border Glow -->
+  <rect x="2" y="2" width="1396" height="896" rx="28" stroke="#1F2937" stroke-width="4" stroke-opacity="0.4" />
+
+  <!-- Sidebar (Left) -->
+  <g id="sidebar">
+    <rect x="0" y="0" width="80" height="900" fill="#070A13" rx="30" />
+    <!-- Round off top/bottom right corners of sidebar to align with main background -->
+    <path d="M 80,0 L 80,900" stroke="#111827" stroke-width="2" />
+    
+    <!-- Sidebar Icons -->
+    <circle cx="40" cy="80" r="18" fill="#1E293B" />
+    <path d="M34 80H46M40 74V86" stroke="#6366F1" stroke-width="2" stroke-linecap="round" />
+    
+    <circle cx="40" cy="160" r="18" fill="#0F172A" />
+    <rect x="31" y="151" width="18" height="18" rx="4" stroke="#94A3B8" stroke-width="2" />
+    <path d="M35 156H45M35 160H45M35 164H41" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" />
+    
+    <circle cx="40" cy="240" r="18" fill="#0F172A" />
+    <path d="M31 240C31 234.477 35.4772 230 41 230C46.5228 230 51 234.477 51 240V246C51 248.209 49.2091 250 47 250H35C32.7909 250 31 248.209 31 246V240Z" stroke="#94A3B8" stroke-width="2" />
+    <circle cx="41" cy="237" r="3" fill="#94A3B8" />
+
+    <circle cx="40" cy="320" r="18" fill="#0F172A" />
+    <path d="M32 320C32 313 48 313 48 320M32 320V328H48V320" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    
+    <circle cx="40" cy="820" r="18" fill="#0F172A" />
+    <circle cx="40" cy="820" r="6" stroke="#94A3B8" stroke-width="2" />
+  </g>
+
+  <!-- File Tree Explorer (Sub-sidebar) -->
+  <g id="file-explorer" transform="translate(80, 0)">
+    <rect x="0" y="0" width="220" height="900" fill="#090D1A" />
+    <line x1="220" y1="0" x2="220" y2="900" stroke="#111827" stroke-width="2" />
+    
+    <text x="24" y="50" fill="#4B5563" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">WORKSPACE</text>
+    
+    <!-- File items -->
+    <g transform="translate(24, 90)">
+      <!-- Folder: src -->
+      <path d="M0 6L6 0L12 6" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(90 6 3)" />
+      <rect x="18" y="-4" width="18" height="14" rx="2" fill="#EAB308" />
+      <text x="44" y="8" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">src</text>
+      
+      <!-- File: two_sum.py (active) -->
+      <g transform="translate(20, 36)">
+        <rect x="-10" y="-12" width="180" height="32" rx="6" fill="#1E293B" fill-opacity="0.6" />
+        <rect x="4" y="-2" width="12" height="16" rx="2" fill="#3B82F6" />
+        <text x="6" y="10" fill="#FFF" font-family="monospace" font-size="10" font-weight="bold">py</text>
+        <text x="26" y="10" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">two_sum.py</text>
+      </g>
+
+      <!-- File: main.py -->
+      <g transform="translate(20, 72)">
+        <rect x="4" y="-2" width="12" height="16" rx="2" fill="#94A3B8" />
+        <text x="6" y="10" fill="#000" font-family="monospace" font-size="10" font-weight="bold">py</text>
+        <text x="26" y="10" fill="#6B7280" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="500">main.py</text>
+      </g>
+
+      <!-- Folder: tests -->
+      <g transform="translate(0, 108)">
+        <path d="M0 6L6 0L12 6" fill="none" stroke="#4B5563" stroke-width="2" transform="rotate(180 6 3)" />
+        <rect x="18" y="-4" width="18" height="14" rx="2" fill="#4B5563" />
+        <text x="44" y="8" fill="#6B7280" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">tests</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Editor Window -->
+  <g id="editor" transform="translate(300, 0)">
+    <!-- Editor Header / Tabs -->
+    <rect x="0" y="0" width="800" height="60" fill="#090D1A" />
+    <line x1="0" y1="60" x2="800" y2="60" stroke="#111827" stroke-width="2" />
+    
+    <!-- Tab: two_sum.py -->
+    <rect x="0" y="0" width="160" height="60" fill="#0B0F19" />
+    <line x1="160" y1="0" x2="160" y2="60" stroke="#111827" stroke-width="2" />
+    <rect x="20" y="22" width="12" height="16" rx="2" fill="#3B82F6" />
+    <text x="40" y="36" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">two_sum.py</text>
+    <!-- Close icon -->
+    <path d="M132 26L140 34M140 26L132 34" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="0" y1="0" x2="160" y2="0" stroke="#6366F1" stroke-width="3" />
+
+    <!-- Code Editor Content -->
+    <g transform="translate(0, 60)">
+      <!-- Line Numbers -->
+      <g fill="#4B5563" font-family="Consolas, Monaco, monospace" font-size="18" text-anchor="end">
+        <text x="50" y="80">1</text>
+        <text x="50" y="120">2</text>
+        <text x="50" y="160">3</text>
+        <text x="50" y="200">4</text>
+        <text x="50" y="240">5</text>
+        <text x="50" y="280">6</text>
+        <text x="50" y="320">7</text>
+        <text x="50" y="360">8</text>
+      </g>
+      
+      <!-- Python Code -->
+      <g font-family="Consolas, Monaco, 'Fira Code', monospace" font-size="20" font-weight="600" xml:space="preserve">
+        <!-- def two_sum(nums, target): -->
+        <text x="90" y="80">
+          <tspan fill="#F43F5E">def</tspan> <tspan fill="#60A5FA">two_sum</tspan><tspan fill="#F3F4F6">(nums, target):</tspan>
+        </text>
+        
+        <!-- seen = {} -->
+        <text x="90" y="120">
+          <tspan fill="#F3F4F6">    seen = {}</tspan>
+        </text>
+        
+        <!-- for i, num in enumerate(nums): -->
+        <text x="90" y="160">
+          <tspan fill="#F43F5E">    for</tspan> <tspan fill="#F3F4F6">i, num </tspan><tspan fill="#F43F5E">in</tspan> <tspan fill="#34D399">enumerate</tspan><tspan fill="#F3F4F6">(nums):</tspan>
+        </text>
+        
+        <!-- if target - num in seen: -->
+        <text x="90" y="200">
+          <tspan fill="#F43F5E">        if</tspan> <tspan fill="#F3F4F6">target - num </tspan><tspan fill="#F43F5E">in</tspan> <tspan fill="#F3F4F6">seen:</tspan>
+        </text>
+        
+        <!-- return [seen[target - num], i] -->
+        <text x="90" y="240">
+          <tspan fill="#F43F5E">            return</tspan> <tspan fill="#F3F4F6">[seen[target - num], i]</tspan>
+        </text>
+        
+        <!-- seen[num] = i -->
+        <text x="90" y="280">
+          <tspan fill="#F3F4F6">        seen[num] = i</tspan>
+        </text>
+        
+        <!-- return [] -->
+        <text x="90" y="320">
+          <tspan fill="#F43F5E">    return</tspan> <tspan fill="#F3F4F6">[]</tspan>
+        </text>
+      </g>
+
+      <!-- Cursor -->
+      <rect x="226" y="303" width="10" height="24" fill="#6366F1" />
+    </g>
+  </g>
+
+  <!-- Right Collaboration Panel -->
+  <g id="collab-panel" transform="translate(1100, 0)">
+    <rect x="0" y="0" width="300" height="900" fill="#070A13" />
+    <line x1="0" y1="0" x2="0" y2="900" stroke="#111827" stroke-width="2" />
+    
+    <!-- Panel Header -->
+    <text x="30" y="50" fill="#4B5563" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="1">COLLABORATORS</text>
+    
+    <!-- User: Alice -->
+    <g transform="translate(30, 90)">
+      <!-- Avatar -->
+      <circle cx="25" cy="25" r="22" fill="#A855F7" />
+      <text x="25" y="31" fill="#FFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">A</text>
+      <!-- Online Indicator -->
+      <circle cx="43" cy="41" r="6" fill="#10B981" stroke="#070A13" stroke-width="2" />
+      
+      <text x="65" y="22" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Alice</text>
+      <text x="65" y="40" fill="#10B981" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="500">Active</text>
+    </g>
+
+    <!-- User: Bob -->
+    <g transform="translate(30, 170)">
+      <!-- Avatar -->
+      <circle cx="25" cy="25" r="22" fill="#3B82F6" />
+      <text x="25" y="31" fill="#FFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">B</text>
+      <!-- Idle Indicator -->
+      <circle cx="43" cy="41" r="6" fill="#F59E0B" stroke="#070A13" stroke-width="2" />
+      
+      <text x="65" y="22" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Bob</text>
+      <text x="65" y="40" fill="#F59E0B" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="500">Idle</text>
+    </g>
+
+    <!-- User: Charlie -->
+    <g transform="translate(30, 250)">
+      <!-- Avatar -->
+      <circle cx="25" cy="25" r="22" fill="#EC4899" />
+      <text x="25" y="31" fill="#FFF" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">C</text>
+      <!-- Online Indicator -->
+      <circle cx="43" cy="41" r="6" fill="#10B981" stroke="#070A13" stroke-width="2" />
+      
+      <text x="65" y="22" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Charlie</text>
+      <text x="65" y="40" fill="#6B7280" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="500">Active</text>
+    </g>
+  </g>
+</svg>

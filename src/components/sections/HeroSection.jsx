@@ -4,10 +4,19 @@ import { useWordCycle } from "../../hooks/useWordCycle";
 import { useTheme } from "../../context/ThemeContext";
 import OrangeBtn from "../common/OrangeBtn";
 
+const TITLES = [
+  "Backend Developer",
+  "Competitive Programmer",
+  "AI Engineer",
+  "Distributed Systems Engineer"
+];
+
 export default function HeroSection() {
   const { dark } = useTheme();
   const [word, show] = useWordCycle(WORDS);
   const [heroImage, setHeroImage] = useState(HERO_IMG);
+  
+  const [currentTitle, showTitle] = useWordCycle(TITLES, 3000);
 
   return (
     <section
@@ -31,7 +40,16 @@ export default function HeroSection() {
               }`}
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-orange-500" />
-              Full-Stack Developer
+              <span
+                style={{
+                  opacity: showTitle ? 1 : 0,
+                  transform: showTitle ? "translateY(0)" : "translateY(4px)",
+                  transition: "opacity 0.2s ease, transform 0.2s ease",
+                  display: "inline-block",
+                }}
+              >
+                {currentTitle}
+              </span>
             </div>
 
             <h1

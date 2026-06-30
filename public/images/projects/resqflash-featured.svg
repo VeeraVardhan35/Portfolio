@@ -1,25 +1,122 @@
 <svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1400" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F3F4F6"/>
-      <stop offset="1" stop-color="#E5E7EB"/>
-    </linearGradient>
-    <linearGradient id="blue" x1="470" y1="180" x2="920" y2="540" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1D4ED8"/>
-      <stop offset="1" stop-color="#0B1D74"/>
-    </linearGradient>
-    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FF5A36"/>
-      <stop offset="1" stop-color="#DC2626"/>
-    </linearGradient>
-  </defs>
+  <!-- Background -->
+  <rect width="1400" height="900" rx="30" fill="#0B0F19" />
+  <rect x="2" y="2" width="1396" height="896" rx="28" stroke="#1F2937" stroke-width="4" stroke-opacity="0.4" />
 
-  <rect width="1400" height="900" fill="url(#bg)"/>
+  <!-- Sidebar (Left) -->
+  <g id="sidebar" transform="translate(0, 0)">
+    <rect x="0" y="0" width="220" height="900" fill="#070A13" rx="30" />
+    <path d="M 220,0 L 220,900" stroke="#111827" stroke-width="2" />
+    
+    <!-- Logo -->
+    <text x="30" y="65" fill="#EF4444" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="900">ResQFlash</text>
+    
+    <!-- Nav Items -->
+    <g transform="translate(30, 140)">
+      <!-- Active Item: DashBoard -->
+      <g transform="translate(0, 0)">
+        <rect x="-15" y="-12" width="180" height="42" rx="8" fill="#1E293B" />
+        <circle cx="10" cy="10" r="5" fill="#EF4444" />
+        <text x="32" y="16" fill="#FFF" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">DashBoard</text>
+      </g>
+      
+      <!-- Item: Incidents -->
+      <g transform="translate(0, 56)">
+        <circle cx="10" cy="10" r="5" fill="#94A3B8" />
+        <text x="32" y="16" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Incidents</text>
+      </g>
 
-  <path d="M700 120C584 120 490 214 490 330V352C450 374 422 418 422 468V520C422 592 480 650 552 650H607L700 786L793 650H848C920 650 978 592 978 520V468C978 418 950 374 910 352V330C910 214 816 120 700 120Z" fill="url(#blue)"/>
-  <path d="M550 280H850C900 280 940 320 940 370V500C940 550 900 590 850 590H765C744 590 726 607 726 628V650H674V628C674 607 656 590 635 590H550C500 590 460 550 460 500V370C460 320 500 280 550 280Z" fill="#F9FAFB"/>
-  <path d="M690 220L560 440H680L620 610L840 350H710L780 220H690Z" fill="url(#red)"/>
+      <!-- Item: Ambulances -->
+      <g transform="translate(0, 112)">
+        <circle cx="10" cy="10" r="5" fill="#94A3B8" />
+        <text x="32" y="16" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Ambulances</text>
+      </g>
 
-  <text x="360" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="120" font-weight="700" fill="#0B1D74">ResQ</text>
-  <text x="730" y="840" font-family="Segoe UI, Arial, sans-serif" font-size="120" font-weight="500" fill="#DC2626">Flash</text>
+      <!-- Item: Hospitals -->
+      <g transform="translate(0, 168)">
+        <circle cx="10" cy="10" r="5" fill="#94A3B8" />
+        <text x="32" y="16" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Hospitals</text>
+      </g>
+
+      <!-- Item: Analytics -->
+      <g transform="translate(0, 224)">
+        <circle cx="10" cy="10" r="5" fill="#94A3B8" />
+        <text x="32" y="16" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Analytics</text>
+      </g>
+
+      <!-- Item: Settings -->
+      <g transform="translate(0, 280)">
+        <circle cx="10" cy="10" r="5" fill="#94A3B8" />
+        <text x="32" y="16" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Settings</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Center: Map Section -->
+  <g id="map-section" transform="translate(250, 40)">
+    <rect x="0" y="0" width="800" height="820" rx="20" fill="#070A13" stroke="#1E293B" stroke-width="2" />
+    <text x="30" y="45" fill="#F3F4F6" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">Live Incidents Map</text>
+    
+    <!-- Map Graphic container -->
+    <g transform="translate(30, 80)">
+      <rect x="0" y="0" width="740" height="710" rx="16" fill="#0A0E1A" />
+      
+      <!-- Fake Grid / Streets -->
+      <path d="M 0,200 L 740,200 M 0,450 L 740,450 M 0,600 L 740,600 M 200,0 L 200,710 M 450,0 L 450,710 M 600,0 L 600,710" stroke="#1E293B" stroke-width="2" />
+      <path d="M 50,50 L 650,650 M 650,50 L 50,650" stroke="#111827" stroke-width="4" stroke-dasharray="10 10" />
+
+      <!-- Map Pin 1 (Red - Incident) -->
+      <g transform="translate(300, 250)">
+        <circle cx="0" cy="0" r="28" fill="#EF4444" fill-opacity="0.15" />
+        <circle cx="0" cy="0" r="16" fill="#EF4444" fill-opacity="0.3" />
+        <circle cx="0" cy="0" r="8" fill="#EF4444" />
+      </g>
+
+      <!-- Map Pin 2 (Green - Available Ambulance) -->
+      <g transform="translate(180, 500)">
+        <circle cx="0" cy="0" r="28" fill="#10B981" fill-opacity="0.15" />
+        <circle cx="0" cy="0" r="16" fill="#10B981" fill-opacity="0.3" />
+        <circle cx="0" cy="0" r="8" fill="#10B981" />
+      </g>
+
+      <!-- Map Pin 3 (Blue - Dispatcher/Hospital) -->
+      <g transform="translate(520, 380)">
+        <circle cx="0" cy="0" r="28" fill="#3B82F6" fill-opacity="0.15" />
+        <circle cx="0" cy="0" r="16" fill="#3B82F6" fill-opacity="0.3" />
+        <circle cx="0" cy="0" r="8" fill="#3B82F6" />
+      </g>
+
+      <!-- Connecting Routing Line -->
+      <path d="M 180,500 L 300,250 L 520,380" stroke="#EAB308" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 8" />
+    </g>
+  </g>
+
+  <!-- Right: Stats Panel -->
+  <g id="stats-panel" transform="translate(1080, 40)">
+    <!-- Card 1: Active Incidents -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="290" height="250" rx="20" fill="#070A13" stroke="#1E293B" stroke-width="2" />
+      <text x="24" y="40" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Active Incidents</text>
+      <text x="24" y="140" fill="#FFF" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="900">12</text>
+      <rect x="24" y="180" width="140" height="32" rx="6" fill="#EF4444" fill-opacity="0.15" />
+      <text x="34" y="201" fill="#F87171" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">+3 from last hour</text>
+    </g>
+
+    <!-- Card 2: Ambulances -->
+    <g transform="translate(0, 285)">
+      <rect x="0" y="0" width="290" height="250" rx="20" fill="#070A13" stroke="#1E293B" stroke-width="2" />
+      <text x="24" y="40" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Ambulances</text>
+      <text x="24" y="140" fill="#FFF" font-family="Segoe UI, Arial, sans-serif" font-size="76" font-weight="900">18</text>
+      <rect x="24" y="180" width="100" height="32" rx="6" fill="#10B981" fill-opacity="0.15" />
+      <text x="34" y="201" fill="#34D399" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Available</text>
+    </g>
+
+    <!-- Card 3: Response Time -->
+    <g transform="translate(0, 570)">
+      <rect x="0" y="0" width="290" height="250" rx="20" fill="#070A13" stroke="#1E293B" stroke-width="2" />
+      <text x="24" y="40" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600">Response Time</text>
+      <text x="24" y="140" fill="#EAB308" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="900">04:32</text>
+      <text x="24" y="195" fill="#6B7280" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="600">Avg. time (min)</text>
+    </g>
+  </g>
 </svg>
